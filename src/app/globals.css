@@ -1,0 +1,150 @@
+@import "tailwindcss";
+@import "reactflow/dist/style.css";
+
+:root {
+  --background: #f4f7fb;
+  --foreground: #101828;
+  --sidebar: #061225;
+  --sidebar-soft: #0d1f3a;
+  --surface: #ffffff;
+  --muted: #667085;
+  --line: #dfe5ef;
+  --accent: #2457ff;
+  --accent-purple: #6941c6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-vazirmatn);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-vazirmatn), sans-serif;
+  overflow-x: clip;
+  text-rendering: geometricPrecision;
+  font-feature-settings: "ss01", "tnum";
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0, rgba(244, 247, 251, 0) 260px),
+    linear-gradient(90deg, rgba(36, 87, 255, 0.035), rgba(105, 65, 198, 0.032));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(49, 87, 255, 0.16);
+}
+
+.soft-shadow {
+  box-shadow:
+    0 18px 48px rgba(15, 23, 42, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.65) inset;
+}
+
+.panel-shadow {
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.05),
+    0 16px 34px rgba(15, 23, 42, 0.075),
+    0 1px 0 rgba(255, 255, 255, 0.78) inset;
+}
+
+.premium-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.9)),
+    var(--surface);
+  border-color: rgba(208, 215, 229, 0.86);
+}
+
+.code-block {
+  background:
+    linear-gradient(180deg, rgba(20, 38, 76, 0.98), rgba(6, 18, 37, 1)),
+    #061225;
+  box-shadow:
+    0 22px 45px rgba(6, 18, 37, 0.26),
+    0 1px 0 rgba(255, 255, 255, 0.08) inset;
+}
+
+.dark-panel {
+  background:
+    linear-gradient(135deg, rgba(10, 31, 68, 0.98), rgba(7, 19, 38, 1) 58%, rgba(16, 38, 77, 0.98)),
+    #071326;
+  border-color: rgba(147, 197, 253, 0.18);
+  box-shadow:
+    0 24px 55px rgba(7, 19, 38, 0.22),
+    0 1px 0 rgba(255, 255, 255, 0.1) inset;
+}
+
+.grid-texture {
+  background-image:
+    linear-gradient(rgba(36, 87, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(36, 87, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 253, 0.92));
+  background-size: 32px 32px, 32px 32px, auto;
+}
+
+.fine-grid {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.persian-number {
+  font-variant-numeric: tabular-nums;
+}
+
+.react-flow__attribution {
+  display: none;
+}
+
+.react-flow__node {
+  font-family: var(--font-vazirmatn), sans-serif;
+}
+
+.react-flow__edge-path {
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.85));
+}
+
+.react-flow__controls {
+  overflow: hidden;
+  border: 1px solid rgba(208, 215, 229, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.09);
+}
+
+.react-flow__controls-button {
+  border-bottom-color: rgba(208, 215, 229, 0.78) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+}
+
+.react-flow__controls-button:hover {
+  background: #eff6ff !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
